@@ -1,7 +1,5 @@
 /*
-    a. Dado un String y una letra, que cuente la cantidad de apariciones de la letra en
-        el String
-    b. Dados 3 números y un orden (ascendente o decreciente) que ordene los
+        Dados 3 números y un orden (ascendente o decreciente) que ordene los
         mismos y los retorne en un vector de 3
     c. Dado un vector de números, y un número X, que sume todos los números > X y
         retorne el resultado
@@ -11,9 +9,9 @@ package ejercicios;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
-public class Ejercicio01 {
+public class OrdenadorDeNumeros {
 
-    public static void main(String[] args) {
+    public static void ordenarNumeros() {
         Scanner entrada = new Scanner(System.in);
         int arreglo[], nElementos, aux;
 
@@ -37,7 +35,8 @@ public class Ejercicio01 {
             }
         }
 
-        //imprimo el valor del arreglo ordenado
+//        return arreglo;
+//        imprimo el valor del arreglo ordenado
         System.out.println("\nArreglo ordenado en forma creciente: ");
         for (int i : arreglo) {
             System.out.print(i + " - ");
