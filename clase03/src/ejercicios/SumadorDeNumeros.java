@@ -32,6 +32,6 @@ public class SumadorDeNumeros {
                 suma += numeros[i];
             }
         }
-        System.out.println("\nLa suma total es:" + suma);
+        System.out.println("\nLa suma total es: " + suma);
     }
 }
