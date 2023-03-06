@@ -14,7 +14,7 @@ public class ContadorDeLetras {
         String cadena;
         char letra;
 
-        System.out.println("escriba una frase: ");
+        System.out.println("\nEscriba una frase: ");
         cadena = entrada.nextLine();
         System.out.println("Digite una letra para ver cuantas veces aparece: ");
         letra = entrada.next().charAt(0);

@@ -14,8 +14,10 @@ public class OrdenadorDeNumeros {
     public static void ordenarNumeros() {
         Scanner entrada = new Scanner(System.in);
         int arreglo[], nElementos, aux;
+        boolean ordenamientoCreciente;
 
-        nElementos = Integer.parseInt(JOptionPane.showInputDialog("Digite la cantidad de elementos del array: "));
+        System.out.println("Digite la cantidad de elementos que desea ordenar(longitud del array): ");
+        nElementos = entrada.nextInt();
 
         arreglo = new int[nElementos];
 
@@ -35,16 +37,23 @@ public class OrdenadorDeNumeros {
             }
         }
 
-//        return arreglo;
-//        imprimo el valor del arreglo ordenado
-        System.out.println("\nArreglo ordenado en forma creciente: ");
-        for (int i : arreglo) {
-            System.out.print(i + " - ");
-        }
+        entrada.nextLine();
+        System.out.println("Desea ordenar la lista de numeros de manera creciente?:(s/n) ");
+        ordenamientoCreciente = entrada.nextLine().trim().equalsIgnoreCase("s");
 
-        System.out.println("\nArreglo ordenado decreciente: ");
-        for (int i = nElementos - 1; i >= 0; i--) {
-            System.out.print( arreglo[i] + " - ");
+//        imprimo el valor del arreglo ordenado
+        if (ordenamientoCreciente) {
+            System.out.println("\nArreglo ordenado en forma creciente: ");
+            for (int i : arreglo) {
+                System.out.print(i + " - ");
+            }
+
+        } else {
+            System.out.println("\nArreglo ordenado decreciente: ");
+            for (int i = nElementos - 1; i >= 0; i--) {
+                System.out.print(arreglo[i] + " - ");
+            }
+
         }
 
     }
