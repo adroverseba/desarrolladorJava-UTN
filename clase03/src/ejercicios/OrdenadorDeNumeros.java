@@ -6,24 +6,24 @@
  */
 package ejercicios;
 
-import java.util.Scanner;
-import javax.swing.JOptionPane;
-
 public class OrdenadorDeNumeros {
 
     public static void ordenarNumeros() {
-        Scanner entrada = new Scanner(System.in);
+        LectorOrdenador lector = new LectorOrdenador();
+//        entrada = new Scanner(System.in);
         int arreglo[], nElementos, aux;
         boolean ordenamientoCreciente;
 
         System.out.println("Digite la cantidad de elementos que desea ordenar(longitud del array): ");
-        nElementos = entrada.nextInt();
+        //todo modificar esto de abajo
+//        nElementos = entrada.nextInt();
+        nElementos = lector.lectorEntero();
 
         arreglo = new int[nElementos];
 
         for (int i = 0; i < nElementos; i++) {
             System.out.print(i + 1 + ". Digite un numero: ");
-            arreglo[i] = entrada.nextInt();
+            arreglo[i] = lector.lectorEntero();
         }
 
         //Ordenamiento del arreglo
@@ -37,9 +37,9 @@ public class OrdenadorDeNumeros {
             }
         }
 
-        entrada.nextLine();
+//        entrada.nextLine();
         System.out.println("Desea ordenar la lista de numeros de manera creciente?:(s/n) ");
-        ordenamientoCreciente = entrada.nextLine().trim().equalsIgnoreCase("s");
+        ordenamientoCreciente = lector.lectorString().equalsIgnoreCase("s");
 
 //        imprimo el valor del arreglo ordenado
         if (ordenamientoCreciente) {

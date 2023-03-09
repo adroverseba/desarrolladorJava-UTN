@@ -19,6 +19,9 @@
 
 ## Respuesta
 
+Ejercicio 1:<br>
+En carpeta de `clase03`
+
 Ejercicio 2:<br>
 Si se ejecuta desde la consola se debera pasar los argumentos correspondientes a la ruta del archivo donde se encuentra el mismo a leer, y como segundo parametro el nombre de la operacion a realizar pudiendo elegir ente "_sumar_" o "_multiplicar_". Acontinuacion se deja un ejemplo de como deberia ser el **comando ejecutado por consola** suponiendo que el **archivo de lectura** se encuentra **dentro** de la carpeta `clase4\` al **mismo nivel** que `/src`, `/build`, etc .
 
