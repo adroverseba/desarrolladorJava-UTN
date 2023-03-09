@@ -17,15 +17,26 @@ public class Principal {
             //declaracion de variables
             String filePath = args.length > 0 ? args[0] : "numeros.txt";
 
-            String operation = args.length > 1 ? args[1] : "suma";
+            String operation = args.length > 1 ? args[1] : "sumar";
             String cadena;
             int result = 0;
 
             lectorArchivo = new FileReader(filePath);
             BufferedReader lector = new BufferedReader(lectorArchivo);
 
+            if (operation.equalsIgnoreCase("multiplicar")) {
+                result = 1;
+            }
+
             while ((cadena = lector.readLine()) != null) {
-                result += Integer.parseInt(cadena);
+                if (operation.equalsIgnoreCase("sumar")) {
+                    result += Integer.parseInt(cadena);
+                } else if (operation.equalsIgnoreCase("multiplicar")) {
+                    result *= Integer.parseInt(cadena);
+                } else {
+                    System.out.println("Operacion Invalida " + operation);
+                    return;
+                }
             }
 
             lector.close();
