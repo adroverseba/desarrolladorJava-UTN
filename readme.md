@@ -13,6 +13,6 @@ propuestos organizados por sus respectivas clases.
 - **Módulo 4:** Introducción y Proyecto. Patrones de Diseño. Testing de la aplicación. Análisis de los requerimientos del proyecto: notas del consultor. Introducción a la interfaz JDBC. Interfaces de usuario. Especificaciones del sistema. Requerimientos.
 - **Módulo 5:** Herramienta de gestión de proyectos: Trello, Asana. Concepto de Api. Manejo de Ide´s. Maven. Docker. Git. Conocimiento de servidores de aplicaciones: jboss wildfly tomcat
 
-<p style="text-align:center;">
+<p align="center">
 <img src="./assets/img/javalogoimage.png" style="max-width:400px;">
 </p>
