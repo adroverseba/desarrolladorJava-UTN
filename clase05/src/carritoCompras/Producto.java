@@ -13,11 +13,21 @@ public class Producto {
     private int stock;
     private final LocalDate fechaAlta;
 
+    //constructor 1
     public Producto(String nombre,String descripcion,double precio,int stock) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.precio=precio;
         this.stock=stock;
+        this.fechaAlta= LocalDate.now();
+    }
+    
+    //Constructor 2. Con valor por defecto de stock = 10
+    public Producto(String nombre,String descripcion,double precio) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio=precio;
+        this.stock=10;
         this.fechaAlta= LocalDate.now();
     }
 
