@@ -15,7 +15,12 @@ public class DescuentoPorCantidad extends Descuento {
     public int getCantidadMinima() {
         return cantidadMinima;
     }
+    
+    public void setCantidadMinima(int cantidadMinima){
+        this.cantidadMinima=cantidadMinima;
+    }
 
+  
     @Override
     public boolean aplicaDescuento(Carrito carrito) {
         return carrito.getCantidadTotal() >= cantidadMinima;
