@@ -12,7 +12,7 @@ public abstract class Descuento {
         this.cantidadDescuento = cantidadDescuento;
     }
 
-    abstract public double aplicarDescuento(Carrito carrito, double cantidad);
+    abstract public double aplicarDescuento(Carrito carrito);
 
     //getters y setters
     public String getNombreDescuento() {
