@@ -2,6 +2,8 @@
  */
 package com.mycompany.clase07;
 
+import com.mycompany.excepciones.DescuentoInvalido;
+
 public abstract class Descuento {
 
     private String nombreDescuento;
@@ -12,7 +14,7 @@ public abstract class Descuento {
         this.cantidadDescuento = cantidadDescuento;
     }
 
-    abstract public double aplicarDescuento(Carrito carrito);
+    abstract public double aplicarDescuento(Carrito carrito)throws DescuentoInvalido;
 
     //getters y setters
     public String getNombreDescuento() {

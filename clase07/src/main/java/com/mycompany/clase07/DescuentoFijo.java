@@ -4,10 +4,26 @@
  */
 package com.mycompany.clase07;
 
-/**
- *
- * @author adrov
- */
-public class DescuentoFijo {
-    
+import com.mycompany.excepciones.DescuentoInvalido;
+
+public class DescuentoFijo extends Descuento {
+
+    //metodo contructor
+    public DescuentoFijo(String nombreDescuento, double cantidadDescuento) {
+        super(nombreDescuento, cantidadDescuento);
+    }
+
+    @Override
+    public double aplicarDescuento(Carrito carrito) throws DescuentoInvalido {
+        double precioConDescuento;
+        if (carrito.getTipoDescuento().equals(TipoDescuentoEnum.FIJO)) {
+            precioConDescuento = carrito.getPrecioTotalCarrito() - this.getCantidadDescuento();
+            carrito.setPrecioTotalCarrito(precioConDescuento);
+            carrito.setDescuentoAplicado(true);
+        }else{
+            throw new DescuentoInvalido("Tipo de descuento invalido");
+        }
+        return precioConDescuento;
+    }
+
 }
